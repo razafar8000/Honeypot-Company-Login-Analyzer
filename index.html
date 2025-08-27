@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UBS Systems Employee Login</title>
+  <title>Secure Portal Login</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #2c3e50, #34495e);
+      background-color: #f5f6fa;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,50 +15,40 @@
     }
     .login-container {
       background: #ffffff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
-      width: 360px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      width: 350px;
       text-align: center;
     }
-    .logo {
-     width: 400px;
-     height: auto;
-     display: block;
-     margin: 0 auto 20px auto;
-    }
-    .login-container img {
-      width: 60px;
-      margin-bottom: 15px;
-    }
     .login-container h2 {
-      margin-bottom: 25px;
-      color: #2c3e50;
+      margin-bottom: 20px;
+      color: #333333;
     }
     input[type="text"], input[type="password"] {
       width: 90%;
-      padding: 12px;
+      padding: 10px;
       margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
       font-size: 14px;
     }
     input[type="submit"] {
       width: 95%;
       padding: 12px;
-      background: #007bff;
+      background: #4CAF50;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       color: #ffffff;
       font-size: 16px;
       cursor: pointer;
       margin-top: 15px;
     }
     input[type="submit"]:hover {
-      background: #0056b3;
+      background: #45a049;
     }
     .footer {
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 12px;
       color: #777777;
     }
@@ -66,17 +56,16 @@
 </head>
 <body>
   <div class="login-container">
-    <!-- Fake company logo -->
-    <img src="/logo14.png" alt="UBS Systems Logo" style="width:250px;height:auto;display:block;margin:0 auto 20px;">
-    <h2>UBS Systems Employee Login</h2>
-    <!-- Form posts to login.py -->
+    <h2>Secure Login</h2>
+    <!-- Notice the action points to /cgi-bin/login.py -->
     <form method="post" action="/cgi-bin/login.py">
       <input type="text" name="user" placeholder="Username" required><br>
       <input type="password" name="pass" placeholder="Password" required><br>
       <input type="submit" value="Login">
     </form>
-
-    <div class="footer">© 2025 UBS Systems — Internal Use Only</div>
+     {{error_message}}
+    <div class="footer">© 2025 Secure Portal</div>
   </div>
 </body>
 </html>
+
