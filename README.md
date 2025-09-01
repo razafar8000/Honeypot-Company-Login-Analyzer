@@ -1,6 +1,6 @@
 Honeypot Company Login Analyzer on AWS
 
-<img width="938" height="823" alt="Honeypot Decoy Corporate Login Page" src="https://github.com/user-attachments/assets/d00fde94-a047-4da4-a6f0-0b481bf51412" />
+<img width="1728" height="974" alt="Honeypot Decoy Corporate Login Page" src="https://github.com/user-attachments/assets/11ce8a97-361d-487f-8cef-bb8d7506c4c7" />
 
 Project Overview: Credential brute-force attacks are one of the most common threats against login systems. This project sets up a honeypot login page for a fake company's internal website on an AWS EC2 instance to capture unauthorized login attempts, store them in logs, and analyze attacker behavior. The project includes: A fake login page (index.html) served via Apache. A backend script (login.py) that logs all login attempts (username, password, IP address, timestamp). A log parser (parse_logs.py) that structures raw logs into CSV format. A visualization script (visualize.py) that generates charts of attacker behavior. This demonstrates end-to-end threat monitoring, log analysis, and data visualization — critical skills for security engineering.
 
