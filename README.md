@@ -11,7 +11,7 @@ Sample Outputs: When attackers interact with the honeypot: ip_attempts.png → S
 How It Works: Deployment: Honeypot hosted on AWS EC2 with Apache. Data Capture: login.py records login attempts into a log file. Parsing: parse_logs.py converts logs into a structured CSV (dataset.csv). Visualization: visualize.py generates attacker behavior charts. Analysis: Patterns of brute-force activity can be studied and used for security insights.
 
 <img width="631" height="870" alt="Honeypot Report Dashboard" src="https://github.com/user-attachments/assets/d4f03022-af67-4b6b-82db-a3935e6ef51b" />
-<img width="1350" height="420" alt="Honeypot Dataset" src="https://github.com/user-attachments/assets/040728fd-f0a6-44ee-b342-d54705fc6711" />
+<img width="1350" height="420" alt="Honeypot Dataset" src="https://github.com/user-attachments/assets/fc1cf7aa-da72-46b8-8b9f-87705ddfecd7" />
 
 Future Improvements: Add real-time alerting when brute-force attempts cross a threshold. Store logs in a database (PostgreSQL / MongoDB) for advanced querying. Deploy inside a Docker container for easier setup and reproducibility. Integrate with a SIEM system (Splunk, ELK) for enterprise-grade monitoring.
 
