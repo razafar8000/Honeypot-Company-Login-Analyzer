@@ -1,5 +1,7 @@
 Honeypot Company Login Analyzer on AWS
 
+<img width="938" height="823" alt="Honeypot Decoy Corporate Login Page" src="https://github.com/user-attachments/assets/d00fde94-a047-4da4-a6f0-0b481bf51412" />
+
 Project Overview: Credential brute-force attacks are one of the most common threats against login systems. This project sets up a honeypot login page for a fake company's internal website on an AWS EC2 instance to capture unauthorized login attempts, store them in logs, and analyze attacker behavior. The project includes: A fake login page (index.html) served via Apache. A backend script (login.py) that logs all login attempts (username, password, IP address, timestamp). A log parser (parse_logs.py) that structures raw logs into CSV format. A visualization script (visualize.py) that generates charts of attacker behavior. This demonstrates end-to-end threat monitoring, log analysis, and data visualization — critical skills for security engineering.
 
 Tech Stack: AWS EC2 (Ubuntu) – Cloud hosting environment Apache Web Server (CGI) – Serving the honeypot login page Python – Data parsing (pandas) and visualization (matplotlib) Linux & Bash – System setup, permissions, and secure transfers (scp) Git & GitHub – Version control and project publishing
@@ -7,6 +9,9 @@ Tech Stack: AWS EC2 (Ubuntu) – Cloud hosting environment Apache Web Server (CG
 Sample Outputs: When attackers interact with the honeypot: ip_attempts.png → Shows number of login attempts grouped by IP address user_attempts.png → Shows number of login attempts grouped by username Example: An IP making 500 failed login attempts or a username like “admin” being targeted repeatedly.
 
 How It Works: Deployment: Honeypot hosted on AWS EC2 with Apache. Data Capture: login.py records login attempts into a log file. Parsing: parse_logs.py converts logs into a structured CSV (dataset.csv). Visualization: visualize.py generates attacker behavior charts. Analysis: Patterns of brute-force activity can be studied and used for security insights.
+
+<img width="631" height="870" alt="Honeypot Report Dashboard" src="https://github.com/user-attachments/assets/5bbd411f-7cf6-4e22-bad6-0492ed66be76" />
+<img width="1350" height="420" alt="Honeypot Dataset" src="https://github.com/user-attachments/assets/040728fd-f0a6-44ee-b342-d54705fc6711" />
 
 Future Improvements: Add real-time alerting when brute-force attempts cross a threshold. Store logs in a database (PostgreSQL / MongoDB) for advanced querying. Deploy inside a Docker container for easier setup and reproducibility. Integrate with a SIEM system (Splunk, ELK) for enterprise-grade monitoring.
 
